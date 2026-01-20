@@ -5,9 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    monika yadav
+<body id="bdy">
+    <!-- <p id="ptag">monika</p> -->
+    <!-- <button id="btn"> click</button> -->
+
+    <p id="productname"></p>
+    <p id="price"></p>
+    <p id="rating"></p>
+    <p id="stock"></p>
 </body>
+<script>
+//     let a= document.getElementById("ptag")
+//     let body=document.getElementById("bdy")
+//     let b=document.getElementById("btn")
+
+    
+//     b.addEventListener("click",()=>{
+// bdy.style.background="red"
+//     })
+
+
+let a=document.getElementById("productname")
+let b=document.getElementById("price")
+let c=document.getElementById("rating")
+let d=document.getElementById("stock")
+
+
+
+
+
+
+
+
+const products = [
+  { productName: "Laptop", price: 55000, rating: 4.5, stock: 1 },
+  { productName: "Smartphone", price: 22000, rating: 4.3, stock: 25 },
+  { productName: "Headphones", price: 2500, rating: 4.1, stock: 40 },
+  { productName: "Keyboard", price: 1200, rating: 4.0, stock: 30 },
+  { productName: "Mouse", price: 800, rating: 4.2, stock: 50 },
+  { productName: "Smart Watch", price: 4500, rating: 4.4, stock: 18 },
+  { productName: "Tablet", price: 18000, rating: 4.3, stock: 10 },
+  { productName: "Power Bank", price: 1500, rating: 4.1, stock: 35 },
+  { productName: "Bluetooth Speaker", price: 3200, rating: 4.6, stock: 20 },
+  { productName: "USB Cable", price: 300, rating: 3.9, stock: 100 }
+];
+
+console.log(products);
+
+  products.map((item)=>{
+console.log(item.productName)
+
+a.innerText += `${item.productName}  \n`
+console.log(item.price)
+
+b.innerText += `${item.price}  \n`
+
+console.log(item.rating)
+
+c.innerText += `${item.rating}  \n`
+
+d.innerText += `${item.stock <=5 ? "less then stock" + item.stock   :item.stock}   \n`
+
+
+
+// console.log(item.stock)
+// if(item.stock<=5) {
+//     console.log("less then stock", item.stock)
+//     d.innerText += `${item.stock} less then stock  \n`
+// }
+// else{
+//     d.innerText += `${item.stock}   \n`
+
+// }
+
+})
+
+
+
+</script>
 </html>
 
 
